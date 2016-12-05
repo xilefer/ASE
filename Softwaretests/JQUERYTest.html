@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JQery-Test</title>
+    <meta name="viewport" content="width=device-width, initial scale=1" />
+    <link rel="stylesheet" href="JQUERY\jquery.mobile-1.4.5.min.css" />
+    <script src="JQUERY/jquery.js"></script>
+    <script src="JQUERY/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+        var Object1 = {
+            Temp: 0,
+            SetVariable: function (a) {
+                this.Temp = a;
+            },
+            ShowVariable: function () {
+                window.alert(this.Temp);
+            }
+        };
+        var LoginObject =
+        {
+            Name: "",
+            Password: "",
+            Login: function() {
+                this.Name = document.getElementById("username").value;
+                this.Password = document.getElementById("password").value;
+            }
+        };
+        var Utils =
+        {aa
+        var Loginbuttonselector = "#loginpage.login";
+        var UsernameFieldSelector = "#loginpage.#loginpage_username";
+        var PasswordFieldSelector = "#loginpage.#loginPage_password";
+        var btn = $(Loginbuttonselector);
+        btn.Attr('diabled', )
+
+            ShowLogin : function(a) {
+                window.alert(a.Name + " " + a.Password);
+            }
+            LoginPossible : function() {
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="loginpage" data-role="page">
+        <div data-role="header">
+            <h1>Anmelden</h1>
+        </div>
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label for="username">Benutzername</label>
+                <input type="text" id="username" />
+            </div>
+            <div data-role="fieldcontain">
+                <label for="password">Passwort</label>
+                <input type="text" id="password" />
+            </div>
+            <a href="#welcomepage" data-role="button" onclick="LoginObject.Login()" >Login</a>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h2>Smart Media</h2>
+        </div>
+    </div>
+
+    <div id="welcomepage" data-role="page">
+        <div data-role="header">
+            <a href="#loginpage" data-role="button" onclick="Utils.ShowLogin(LoginObject)">Logout</a>
+            <h1>Willkommen</h1>
+            <a href="#buchungen" data-role="button">Buchung</a>
+        </div>
+        <div data-role="content">
+            <div data-role="fieldcontain">
+
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h2>Smart Media</h2>
+        </div>
+    </div>
+</body>
+</html>
