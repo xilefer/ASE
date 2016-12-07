@@ -1,15 +1,8 @@
-﻿var Controller = new ApplicationController(navigate);
-
-function updateLoginButtonEnabled() {
-    if (Controller.loginPossible()) {
-        $('#Loginbutton').prop("disabled", false);
-    } else {
-        $('#Loginbutton').prop("disabled", true);
-    }
-}
+﻿var Login = new Login();
+var Controller = new ApplicationController(navigate);
 
 $(document).on("pagebeforeshow", "#loginPage", function () {
-    updateLoginButtonEnabled();
+    Login.updateLoginButtonEnabled();
 });
 $(document).on("pagebeforeshow", "#welcomepage", function () {
     $('#welcomelabel').text("Willkommen: " + Controller.username);
@@ -24,14 +17,14 @@ $(function() {
 $(function() {
     $('#password').keyup(function () {
         Controller.password = $('#password').val();
-        updateLoginButtonEnabled();
+        Login.updateLoginButtonEnabled();
     });
 });
 
 $(function () {
     $('#username').keyup(function () {
         Controller.username = $('#username').val();
-        updateLoginButtonEnabled();
+        Login.updateLoginButtonEnabled();
     });
 });
 

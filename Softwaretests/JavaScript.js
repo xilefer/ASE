@@ -15,6 +15,16 @@
     };
 }
 
+function Login() {
+    this.updateLoginButtonEnabled = function () {
+        if (Controller.loginPossible()) {
+            $('#Loginbutton').prop("disabled", false);
+        } else {
+            $('#Loginbutton').prop("disabled", true);
+        }
+    };
+}
+
 var navigate = function(target) {
     $.mobile.changePage(target);
 };
