@@ -12,6 +12,10 @@ $(function() {
         e.preventDefault();
         Controller.login();
         navigate('#welcomepage');
+        httpGetAsync("https://jsonplaceholder.typicode.com",
+            function (XmlHttpResponseText) {
+                $('#ResponseContent').innerHTML = XmlHttpResponseText;
+            });
     });
 });
 $(function() {
@@ -27,4 +31,15 @@ $(function () {
         Login.updateLoginButtonEnabled();
     });
 });
+
+function httpGetAsync(theUrl, callback) {
+    var XmlHttp = new XMLHttpRequest();
+    XmlHttp.onreadystatechange = function () {
+        if (XmlHttp.readyState === 4 && XmlHttp.status === 200) {
+            callback(XmlHttp.responseText);
+        }
+    };
+    XmlHttp.open("GET", theUrl, true);
+    XmlHttp.send(null);
+}
 
